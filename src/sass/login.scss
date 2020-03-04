@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    width: 1130px;
+    margin: 0 auto;
+
+    >a {
+        width: 200px;
+        height: 98px;
+        background: url(../images/mistore_logo.png);
+        display: block;
+    }
+
+    // .logo{
+    //     width: 200px;height: 98px;
+    //     background:url(../images/mistore_logo.png)
+    // }
+}
+
+.banner {
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/7f25f8c94bac0a8bfb3c6a3e30e5b7dd.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    box-sizing: border-box;
+    position: relative;
+
+   
+
+    .juzhong1{
+        width: 1130px;
+        height: 450px;
+         margin: 0 auto;
+        position: relative;
+    }
+
+    .login {
+        width: 410px;
+        min-height: 450px;
+        background: white;
+        position: absolute;
+        right: 0;
+
+        .login-top {
+            width: 410px;
+            height: 83px;
+            text-align: center;
+            font-size: 24px;
+            padding: 27px 0 24px;
+            box-sizing: border-box;
+
+            >span {
+                font-size: 20px;
+            }
+
+            a {
+                color: #666666;
+                text-decoration: none;
+
+                &:hover {
+                    color: #f56600;
+                }
+            }
+
+            .a {
+                color: orange;
+            }
+
+            .line {
+                margin: 0 36px;
+                border: 1px solid #ccc;
+                width: 1px;
+                // display: block;
+            }
+
+        }
+
+        .login-user {
+            width: 340px;
+            height: 360px;
+            padding-left: 36px;
+            position: relative;
+
+            >.err-con {
+                color: #f56600;
+                font-size: 14px;
+            }
+            // .err-con.error {
+            //     background:url("./demo/images/unchecked.gif") no-repeat 0px 0px;
+            // }
+            >input {
+                display: block;
+                width: 306px;
+                height: 22px;
+                padding: 13px 16px 13px 14px;
+                outline: none;
+                margin-bottom: 14px;
+            }
+
+            .loginBtn {
+                padding-top: 14px;
+
+
+                .btn {
+                    width: 340px;
+                    border: none;
+                    cursor: pointer;
+                    background: #ff6700;
+                    height: 50px;
+                    color: white;
+                    font-size: 14px;
+                    outline: none;
+                }
+            }
+
+            .login-mid {
+                font-size: 14px;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+                }
+
+                >span {
+                    >a {
+                        color: #ff6700;
+                    }
+                }
+
+                >div {
+                    float: right;
+                    a,span {
+                    color: #ccc;
+                    }
+                }
+
+            }
+
+            >.other {
+                border: 0;
+                border-top: 1px solid #ccc;
+                color: #ccc;
+                font-size: 14px;
+                margin-top: 40px;
+                padding-top: 20px;
+
+                >.icon {
+                    // background: red;
+                    height: 50px;
+                    text-align: center;
+                    a {
+                        margin: 0 12px;
+                    }
+
+                    >.qq {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background: #0288d1;
+
+                        >i {
+                            background: url(../images/icons_type.png)no-repeat;
+                            display: inline-block;
+                            width: 18px;
+                            height: 22px;
+                            background-position: -19px 4px;
+                            margin-left: 0px;
+                        }
+                    }
+
+                    >.weibo {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background: #d32f2f;
+
+                        >i {
+                            background: url(../images/icons_type.png)no-repeat;
+                            display: inline-block;
+                            width: 18px;
+                            height: 22px;
+                            background-position: -38px 4px;
+                            margin-left: 6px;
+                        }
+                    }
+
+                    >.zfb {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background: #00aaee;
+
+                        >i {
+                            background: url(../images/icons_type.png)no-repeat;
+                            display: inline-block;
+                            width: 25px;
+                            height: 22px;
+                            background-position: -56px 4px;
+                            margin-left: 3px;
+                        }
+                    }
+
+                    >.wx {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background: #00d20d;
+
+                        >i {
+                            background: url(../images/icons_type.png)no-repeat;
+                            display: inline-block;
+                            width: 24px;
+                            height: 23px;
+                            background-position: -84px 5px;
+                            margin-left: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+      
+        .code{
+           
+            width: 320px;height: 290px;
+            // background: red;
+            left: 40px;top: 80px;
+              display: none;
+            font-size: 14px;
+            text-align: center;
+            padding-top: 70px;
+            position: absolute;
+            
+            >img{
+                width: 180px;height: 180px;
+            }
+            
+        }
+       
+    }
+
+}
