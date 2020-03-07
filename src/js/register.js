@@ -49,7 +49,7 @@ $(function () {
             data:$(form).serialize(),
             success:function(res){
                 if(res=="1"){
-                    window.location="http://localhost:8080/pages/login.html"
+                    window.location.href="http://localhost:8080/pages/login.html"
                 }
             },
             error:function(res){

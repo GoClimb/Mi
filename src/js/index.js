@@ -202,21 +202,17 @@ $(function () {
         dataType: 'json',
         success: function (res) {
             let str = ''
-            res.forEach((value) => {
+            res.forEach(value => {
                 str += `<li>${value.name}</li>`
             })
-            $('.nav-content-mid')
-                .html(str)
-                .on({
+            $('.nav-content-mid').html(str).children('li').on({
                     mouseenter: () => {
                         $('.nav-box').stop().slideDown()
                     },
                     mouseleave: () => {
                         $('.nav-box').stop().slideUp()
                     }
-                })
-
-            $('.nav-content-mid').children('li').on('mouseover', function () {
+                }).on('mouseover', function () {
                 const index = $(this).index()
                 const list = res[index].list
                 let str = ''
@@ -257,10 +253,37 @@ $(function () {
             //         $('.navBox1').stop().slideUp()
             //     }   
             // })
+         
         }
-
-
     })
+
+    $.ajax({
+        url: '../lib/indexPhone.json',
+        dataType: 'json',
+        success: function (res) {
+            bingPhone(res)
+           
+        }
+    })
+   
+    function bingPhone(res){
+    let newsPhone = res.slice(0,1)
+
+    let newsPhone2 = newsPhone[0].list
+    console.log(newsPhone2)
+    let str =''
+    newsPhone2.forEach(item=>{
+        str+=`<div>
+        <img src="${item.list_url2}" alt="">
+        <p>${item.list_name}</p>
+        <p>${item.list_name}</p>
+        <p>${item.list_price}</p>
+        </div>
+        `
+    })
+    $('.phone-bottom-right').html(str)
+    }
+
     $.ajax({
         url: '../lib/main.json',
         dataType: 'json',
@@ -285,9 +308,7 @@ $(function () {
                     $('.list-right>ul').html(str1)
                 },
                 mouseout: function () {
-                    
                         $('.list-right').hide()
-            
 
                 }
             })

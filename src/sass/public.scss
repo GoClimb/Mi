@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+
+body {
+    height: 100%;
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+@mixin font($font) {
+    text-decoration: none;
+    font-size: $font;
+}
+$color:#b0b0b0;
+
+    #header {
+    height: 40px;
+    background: #333;
+
+        .header-content {
+            width: 1226px;
+            height: 40px;
+            margin: 0 auto;
+            position: relative;
+
+            // overflow: hidden;
+            a {
+                line-height: 40px;
+                display: inline-block;
+                 @include font(12px);
+                color: #b0b0b0;
+
+                &:hover {
+                    color: white;
+                }
+
+            }
+
+            >.head-left {
+                width: 750px;
+                height: 30px;
+                list-style: none;
+                float: left;
+
+                span {
+                    padding: 0 4px;
+                    color: #b0b0b0;
+                }
+            }
+
+            >.head-right {
+                width: 280px;
+                height: 40px;
+                float: right;
+
+
+                .pull-right-left {
+                    float: left;
+
+                    span {
+                        padding: 0 2px;
+                        color: #b0b0b0;
+                    }
+
+                }
+
+                .pull-right-right {
+                    width: 120px;
+                    height: 40px;
+                    background: #424242;
+                    float: right;
+                    line-height: 40px;
+                    color: $color;
+
+                    em {
+                        padding: 0 11px;
+
+                        img{
+                            width: 20px;
+                        }
+                    }
+                    span {
+                        @include font(12px);
+                    }
+
+                }
+
+            }
+
+            .cartBox {
+                position: absolute;
+                width: 300px;
+                height: 0px;
+                background: red;
+                right: 0;
+                top: 40px;
+                overflow: hidden;
+                text-align: center;
+            }
+        }
+    }
+
+    #nav {
+        height: 100px;
+    
+        .nav-content {
+            width: 1226px;
+            height: 80px;
+            margin: 0 auto;
+            padding-top: 20px;
+    
+            .logo {
+                padding-top: 4px;
+                padding-left: 4px;
+                width: 55px;
+                height: 55px;
+                background: #ff6700;
+                // text-align: center;
+                float: left;
+                position: relative;
+                overflow: hidden;
+    
+                img {
+                    position: absolute;
+                }
+    
+                img:nth-child(2) {
+                    left: -49px;
+                }
+            }
+    
+            .nav-content-mid {
+                float: left;
+                width: 900px;
+                padding-left: 180px;
+                //  height: 70px;
+    
+                li {
+                    float: left;
+                    height: 80px;
+                    padding: 0 17px;
+                    text-align: center;
+                    line-height: 60px;
+                    color: black;
+                    cursor: pointer;
+    
+    
+                }
+            }
+        }
+    
+    }
+    
+    .nav-box {
+        width: 100%;height: 180px;
+        display: none;
+        box-shadow: 1px 1px #ccc;
+        z-index: 999;
+        position: absolute;
+        background: white;
+    
+        >.navBox1 {
+            width: 1226px;
+            margin: 0 auto;
+            display: flex;
+    
+    
+            >li {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+                >div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    border-right: 1px solid #ccc;
+    
+                    img {
+                        width: 160px;
+                        height: 110px;
+                        display: block;
+                    }
+                }
+    
+                >p {
+                    margin: 0;
+                }
+    
+                &:last-child {
+                    >div {
+                        border: none;
+                    }
+                }
+            }
+        }
+    
+    }

@@ -39,17 +39,15 @@ $(function () {
         $.ajax({
             url:'/login',
             type:'post',
+            dataType:'json',
             data:$(form).serialize(),
             success:function(res){
-               if(res=="1"){
-                   window.location="http://localhost:8080/pages/index.html"
-               }else{
-                   $('.err-con').html('用户名密码错误')
-                   $(".btn").click(function() {
-                    validator.resetForm()
-                })
-                
-               }
+                if(res.message=="1"){
+                    document.cookie = 'username='+res.username
+                    window.location.href="./index.html"
+                }else{
+                    $('.err-con').html('用户名密码错误')
+                }
             },
             error:function(res){
                 console.log(res)
